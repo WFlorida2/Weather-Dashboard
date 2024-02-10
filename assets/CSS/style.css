@@ -1,0 +1,58 @@
+/* Global styles for the body */
+body {
+    /* Bootstrap background color */
+    background-color: #f8f9fa; 
+}
+
+/* Styling for the page title */
+#pageTitle {
+    color: rgb(238, 237, 244);
+}
+
+/* Styling for text container */
+.container-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Styling for input fields in column1 */
+#column1 input {
+    margin-bottom: 10px;
+    width: 350px;
+    padding-top: 50;
+}
+
+/* Styling for search buttons with class .btn-primary */
+.btn-primary {
+    background-color: blue; 
+    color: #fff; 
+    border: none; 
+    padding: 0px 30px; 
+    font-size: 16px; 
+    margin-top: -15px;
+}
+
+/* Hover effect for search buttons */
+.btn-primary:hover {
+    background-color:cornflowerblue;
+}
+
+
+/* Styling for image container */
+.image-container {
+    border: 1px solid #ddd; 
+    padding: 10px; 
+}
+
+/* Styling for custom container */
+.custom-container {
+    background-color: lightblue;
+}
+
+/* Responsive styles for smaller screens */
+@media (min-width: 576px) {
+    .input-container,
+    .image-container {
+        width: 100%;
+    }
+}
