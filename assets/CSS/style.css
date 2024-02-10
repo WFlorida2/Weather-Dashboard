@@ -1,56 +1,78 @@
-/* Global styles for the body */
-body {
-    /* Bootstrap background color */
-    background-color: #f8f9fa; 
-}
+    /* Set global styles for the body */
+    body {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        line-height: 1;
+        background-color:lightgrey;
+    }
 
-/* Styling for the page title */
-#pageTitle {
-    color: rgb(238, 237, 244);
-}
+    /* Style for textarea elements */
+    textarea {
+        background: transparent;
+        border: none;
+        resize: none;
+        color: #000000;
+        border-left: 1px solid black;
+        padding: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
 
-/* Styling for text container */
-.container-text {
-    font-size: 18px;
-    font-weight: bold;
-}
+    /* Style for the header section */
+    header {
+        text-align: center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background-color:#000000;
+        color:whitesmoke;
+        border-radius: 0;
+        border-bottom: 10px solid black;
+        padding: 5px;
+    }
 
-/* Styling for input fields in column1 */
-#column1 input {
-    margin-bottom: 10px;
-    width: 350px;
-    padding-top: 50;
-}
+        /* Style for element with ID "currentDay" */
+    #currentDay {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
 
-/* Styling for search buttons with class .btn-primary */
-.btn-primary {
-    background-color: blue; 
-    color: #fff; 
-    border: none; 
-    padding: 0px 30px; 
-    font-size: 16px; 
-    margin-top: -15px;
-}
+    /* Style for input elements */
+    input {
+        width: 85%;
+        margin-right: 10px;
+        padding: 5px;
+        border: 5px solid darkgray;
+        border-radius: 3px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
 
-/* Hover effect for search buttons */
-.btn-primary:hover {
-    background-color:cornflowerblue;
-}
+    /* Style for button elements */
+    button {
+        padding: 0px 10px;
+        background-color: #ffffff;
+        cursor:pointer;
+        margin-top: 6px;
+        border-left: 1px solid var(--BLACK);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        /* background-color: var(--BLUE); */
+        /* color: var(--FONT-WHITE); */
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:fixed;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
 
+    /* Hover effect for button elements */
+    button:hover {
+        font-size: 20px;
+        color:green;
+        transition: all 0.3s ease-in-out;
+    }
 
-/* Styling for image container */
-.image-container {
-    border: 1px solid #ddd; 
-    padding: 10px; 
-}
-
-/* Styling for custom container */
-.custom-container {
-    background-color: lightblue;
-}
-
-/* Responsive styles for smaller screens */
-@media (min-width: 576px) {
+    /* Responsive styles for smaller screens */
+    @media (min-width: 576px) {
     .input-container,
     .image-container {
         width: 100%;
