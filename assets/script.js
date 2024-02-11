@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-            // Show the modal on page load
+    // Show the modal on page load
     $('#infoModal').modal('show');
+    
     // Function to update the current date and time
     function updateDateTime() {
         // Get the current date and time using the dayjs library and format it
@@ -108,6 +109,9 @@ $(document).ready(function() {
             
                 $('#forecast').html(`<div class="row">${forecastHTML}</div>`);
             });
+
+            // Clear the input field after the search button is clicked
+            $('#input-field').val('');
         } else {
             // If city name is empty, display the modal
             $('#infoModal').modal('show');
