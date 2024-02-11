@@ -36,7 +36,8 @@ $(document).ready(function() {
             
             var currentDate = dayjs().format("DD/MM/YYYY"); // Current date
             var addedDates = []; // Array to store dates already added to the forecast HTML
-
+            var wind, humidity; // Declaring wind and humidity variables
+        
             forecastList.forEach(function(forecast){
                 var date = dayjs.unix(forecast.dt).format("DD/MM/YYYY");
                 // Exclude forecast for the current day and duplicates
@@ -44,20 +45,24 @@ $(document).ready(function() {
                     addedDates.push(date); // Add the date to the array
                     var weatherIcon = forecast.weather[0].icon;
                     var tempC = forecast.main.temp - 273.15;
+                    wind = forecast.wind.speed; // Assigning wind speed
+                    humidity = forecast.main.humidity; // Assigning humidity
                     forecastHTML += `
                         <div class="col">
                             <div id="forecast-card" class="card mb-2 mb-sm-2 mx-lg-3 text-center">
                                 <div class="card-body">
                                     <h5 class="card-title">${date}</h5>
                                     <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="Weather Icon">
-                                    <p class="card-text">Temperature : ${tempC.toFixed(2)} °C</p>
-                                    <!-- Include other forecast data as needed -->
+                                    <p class="card-text">Temp: ${tempC.toFixed(2)} °c</p>
+                                    <p class="card-text">Wind: ${wind} km/h</p>
+                                    <p class="card-text">Humidity: ${humidity} %</p>
                                 </div>
                             </div>
                         </div>
                     `;
                 }
             });
+        
             $('#forecast').html(`<div class="row">${forecastHTML}</div>`);
 
             var cityName = data.name;
@@ -78,8 +83,8 @@ $(document).ready(function() {
                     <span style="font-weight: bold;">${currentDate}</span>
                     <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="Weather Icon"></h5>
                     <p class="card-text">Rain: ${rainData} mm</p>
-                    <p class="card-text">Temperature : ${tempC.toFixed(2)} °C</p>
-                    <p class="card-text">Wind Speed: ${wind} KPH</p>
+                    <p class="card-text">Temp: ${tempC.toFixed(2)} °c</p>
+                    <p class="card-text">Wind: ${wind} km/h</p>
                     <p class="card-text">Humidity: ${humidity} %</p>
                     </div>
                 </div>
