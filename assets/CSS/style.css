@@ -27,6 +27,7 @@ header {
     border-bottom: 10px solid black;
     padding: 5px;
     box-shadow: 2px 2px 6px 0 #000;
+    margin-bottom: 20px;
 }
 
 .lead {
@@ -57,6 +58,16 @@ header {
         margin-bottom: 20px;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
+
+    /* Adjustments for input and button */
+.input-group-append {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-append button {
+    margin-top: 10px; /* Adjust as needed */
+}
 
     /* Style for input elements */
     input {
