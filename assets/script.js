@@ -29,6 +29,8 @@
         // ?: This is the ternary operator's conditional part. It's like saying "if data.rain exists and is truthy, then..." // Credit to google search on alternative 
         var rainData = data.rain ? data.rain['1h'] : 0; // if not rainy then shows zero chance of getting wet 🤣 👍
         var tempC = data.main.temp - 273.15;
+        var wind = data.wind.speed;
+        var humidity = data.main.humidity;
         var cardHTML = `
             <div class="card">
                 <div class="card-body">
@@ -36,6 +38,9 @@
                 <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="Weather Icon"></h5>
                 <p class="card-text">Rain: ${rainData} mm</p>
                 <p class="card-text">Temperature : ${tempC.toFixed(2)} °C</p>
+                <p class="card-text">Wind Speed: ${wind} KPH</p>
+                <p class="card-text">Humidity: ${humidity} %</p>
+
                 </div>
 
             </div>
