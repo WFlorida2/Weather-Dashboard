@@ -1,38 +1,58 @@
-    /* Set global styles for the body */
-    body {
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: 16px;
-        line-height: 1;
-        background-color:lightgrey;
-    }
+/* Set global styles for the body */
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color:lightgrey;
+}
 
-    /* Style for textarea elements */
-    textarea {
-        background: transparent;
-        border: none;
-        resize: none;
-        color: #000000;
-        border-left: 1px solid black;
-        padding: 10px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
+/* Style for textarea elements */
+textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
 
-    /* Style for the header section */
-    header {
-        text-align: center;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        background-color:#000000;
-        color:whitesmoke;
-        border-radius: 0;
-        border-bottom: 10px solid black;
-        padding: 5px;
-    }
+/* Style for the header section */
+header {
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:#000000;
+    color:whitesmoke;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+    padding: 5px;
+    box-shadow: 2px 2px 6px 0 #000;
+}
 
-    .lead {
-        color:darkorange;
-    }
-        /* Style for element with ID "currentDay" */
-    #currentDay {
+.lead {
+    color:darkorange;
+}
+/* Style for element with ID "currentDay" */
+#forecast-card {
+    background-color:darkgrey;
+    color:black;
+    border: 1px solid rgba(245, 245, 245, 0.2);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 6px 0 #000;
+    width: 100%;
+}
+
+#currentDay-card {
+    background-color: darkgrey;
+    color:black;
+    font-weight: bold;
+    font-size:larger;
+    border: 1px solid rgba(245, 245, 245, 0.2);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 6px 0 #000;
+    width: 100%;
+}
+#currentDay {
         font-size: 1.5em;
         margin-bottom: 20px;
         font-family:Georgia, 'Times New Roman', Times, serif;
