@@ -28,6 +28,9 @@
         padding: 5px;
     }
 
+    .lead {
+        color:darkorange;
+    }
         /* Style for element with ID "currentDay" */
     #currentDay {
         font-size: 1.5em;
