@@ -25,13 +25,19 @@
         var country = data.sys.country; // added a country identifier as some countries have same city names
         var currentDate = dayjs().format("("+"DD/MM/YYYY"+")");
         var weatherIcon = data.weather[0].icon;
-        console.log(weatherIcon);
+        //console.log(weatherIcon);
+        // ?: This is the ternary operator's conditional part. It's like saying "if data.rain exists and is truthy, then..." // Credit to google search on alternative 
+        var rainData = data.rain ? data.rain['1h'] : 0; // if not rainy then shows zero chance of getting wet 🤣 👍
+        var tempC = data.main.temp - 273.15;
         var cardHTML = `
             <div class="card">
                 <div class="card-body">
                 <h5 class="card-title">${cityName +" , "+country} ${currentDate} 
                 <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="Weather Icon"></h5>
+                <p class="card-text">Rain: ${rainData} mm</p>
+                <p class="card-text">Temperature : ${tempC.toFixed(2)} °C</p>
                 </div>
+
             </div>
         `;
         // Appending the card to the container with ID 'today'
