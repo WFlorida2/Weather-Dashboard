@@ -1,134 +1,168 @@
 /* Set global styles for the body */
 body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* Font styles */
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     line-height: 1;
-    background-color:lightgrey;
+    /* Background and box shadow */
+    background-color: lightgrey;
+    box-shadow: 2px 2px 6px 0 #000;
 }
 
 /* Style for textarea elements */
 textarea {
+    /* Textarea styles */
     background: transparent;
     border: none;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* Font styles */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Style for the header section */
 header {
+    /* Text alignment and styles */
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color:#000000;
-    color:whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #000000;
+    color: whitesmoke;
     border-radius: 0;
     border-bottom: 10px solid black;
     padding: 5px;
+    /* Box shadow */
     box-shadow: 2px 2px 6px 0 #000;
     margin-bottom: 20px;
 }
 
 .lead {
-    color:darkorange;
+    /* Text color */
+    color: darkorange;
 }
-/* Style for element with ID "currentDay" */
+
+/* Styles for elements with IDs */
+/* Style for element with ID "forecast-card" */
 #forecast-card {
-    background-color:darkgrey;
-    color:black;
-    border: 1px solid rgba(245, 245, 245, 0.2);
-    border-radius: 1rem;
-    box-shadow: 2px 2px 6px 0 #000;
-    width: 100%;
-}
-
-#currentDay-card {
+    /* Card styles */
     background-color: darkgrey;
-    color:black;
-    font-weight: bold;
-    font-size:larger;
+    color: black;
     border: 1px solid rgba(245, 245, 245, 0.2);
     border-radius: 1rem;
+    /* Box shadow */
     box-shadow: 2px 2px 6px 0 #000;
     width: 100%;
 }
-#currentDay {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
 
-    /* Adjustments for input and button */
+/* Style for element with ID "currentDay-card" */
+#currentDay-card {
+    /* Card styles */
+    background-color: darkgrey;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    border: 1px solid rgba(245, 245, 245, 0.2);
+    border-radius: 1rem;
+    /* Box shadow */
+    box-shadow: 2px 2px 6px 0 #000;
+    width: 100%;
+}
+
+/* Style for element with ID "currentDay" */
+#currentDay {
+    /* Font styles */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Adjustments for input and button */
 .input-group-append {
+    /* Flexbox styles */
     display: flex;
     flex-direction: column;
 }
 
 .input-group-append button {
+    /* Margin top */
     margin-top: 10px; /* Adjust as needed */
 }
 
-    /* Style for input elements */
-    input {
-        width: 70%;
-        margin-right: 10px;
-        padding: 5px;
-        border: 5px solid darkgray;
-        border-radius: 3px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
+/* Styles for input elements */
+input {
+    /* Input styles */
+    width: 70%;
+    margin-right: 10px;
+    padding: 5px;
+    border: 5px solid darkgray;
+    border-radius: 3px;
+    /* Font styles */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-    /* Style for button elements */
-    button {
-        padding: 0px 10px;
-        background-color: #ffffff;
-        cursor:pointer;
-        margin-top: 6px;
-        border-left: 1px solid var(--BLACK);
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        /* background-color: var(--BLUE); */
-        /* color: var(--FONT-WHITE); */
-        font-size: 1.25rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* position:fixed; */
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
+/* Styles for button elements */
+button {
+    /* Button styles */
+    padding: 0px 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 6px;
+    border-left: 1px solid var(--BLACK);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* Font styles */
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Font family */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-    /* Hover effect for button elements */
-    button:hover {
-        font-size: 20px;
-        color:green;
-        transition: all 0.3s ease-in-out;
-    }
+/* Hover effect for button elements */
+button:hover {
+    /* Button hover styles */
+    font-size: 20px;
+    color: green;
+    /* Transition effect */
+    transition: all 0.3s ease-in-out;
+}
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #f8f9fa; /* Choose a suitable background color */
-            padding: 10px;
-            text-align: center;
-        }
-        
-        .container-hover {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .container-hover .link {
-            margin: 0 10px;
-        }
-        
-    /* Responsive styles for smaller screens */
-    @media (min-width: 576px) {
+/* Styles for the footer section */
+footer {
+    /* Footer position */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Background color */
+    background-color: #f8f9fa; /* Choose a suitable background color */
+    /* Padding and text alignment */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styles for container-hover class */
+.container-hover {
+    /* Flexbox styles */
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for links inside container-hover class */
+.container-hover .link {
+    /* Margin */
+    margin: 0 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media (min-width: 576px) {
     .input-container,
     .image-container {
+        /* Width */
         width: 100%;
     }
 }
+
 
