@@ -4,15 +4,15 @@ The challenge is to build a weather dashboard that will run in the browser and f
 
 Useing the current & 5 Day Weather ForecastLinks to an external site openweathermap.
 
-Skills used / learned :
+## Skills used / learned :
 - DOM manipulation, advanced JavaScript that feature dynamically updated HTML and CSS powered by JavaScript code.
 - Fetching data from servers
 
-Deployed URL : https://wflorida2.github.io/Weather-Dashboard/
+### Deployed URL : https://wflorida2.github.io/Weather-Dashboard/
 Wireframe tool used:
 • draw.io
 
-CREDIT:
+### CREDIT:
 Please Note: I have learned so much during implementing this challenge given my early stages of developments with the huge aid of the following contributors:
 
 ChatGPT: https://chat.openai.com/
@@ -25,15 +25,15 @@ Server-side classes / after hour classes recordings
 Functions and variables creations
 Full credit to students on the Discord group of helping each other’s out with couple of issues. • W3School
 
-Resources:
+### Resources:
 • W3School • ChatGPT • Google search engines • Classes recordings, activities and notes
 
-Installation:
+### Installation:
 • To access the webpage, the following URL should be used: “ https://wflorida2.github.io/Weather-Dashboard/ ”. Once accessed, start the app , then follow the instructions.
 • As a developer who wishes to access the back-end files for this page, you will need to access GitHub to be able to open the repo via the following link: " https://github.com/WFlorida2/Weather-Dashboard "
 
 
-End results:
-![End product 1](assets/images/End product 1.png) 
-![End product 2](assets/images/End product 2.png)
-![End product 3](assets/images/End product 3.png)
+#### End results:
+![End product1](assets/images/End product 1.png) 
+![End product2](assets/images/End product 2.png)
+![End product3](assets/images/End product 3.png)
