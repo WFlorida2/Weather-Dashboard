@@ -47,7 +47,7 @@ $(document).ready(function () {
         // Check if the input field is not empty
         if (cityName !== "") {
             // Construct the API query URL for current weather data
-            var queryCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+            var queryCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKey}`;
 
             // Fetching data for current day
             fetch(queryCurrent)
@@ -67,21 +67,21 @@ $(document).ready(function () {
                     var wind = data.wind.speed;
                     var humidity = data.main.humidity;
                     // '\` is a way to format long strings for better readability in the code
-                    var cardHTML = '\
-                    <div id="currentDay-card" class="card">\
-                        <div class="card-body">\
-                        <h5 class="card-title">\
-                        <span style="font-weight: bold;">' + cityName + '</span> , \
-                        <span style="font-weight: bold;">' + country + '</span>\
-                        <span style="font-weight: bold;">' + currentDate + '</span>\
-                        <img src="http://openweathermap.org/img/w/' + currentWeatherIcon + '.png" alt="Weather Icon"></h5>\
-                        <p class="card-text">Rain: ' + rainData + ' mm</p>\
-                        <p class="card-text">Temp: ' + tempC.toFixed(2) + ' °c</p>\
-                        <p class="card-text">Wind: ' + wind + ' km/h</p>\
-                        <p class="card-text">Humidity: ' + humidity + ' %</p>\
-                        </div>\
-                    </div>\
-                ';
+                    var cardHTML = `
+                    <div id="currentDay-card" class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">
+                        <span style="font-weight: bold;">${cityName}</span> , 
+                        <span style="font-weight: bold;">${country}</span>
+                        <span style="font-weight: bold;">${currentDate}</span>
+                        <img src="http://openweathermap.org/img/w/${currentWeatherIcon}.png" alt="Weather Icon"></h5>
+                        <p class="card-text">Rain: ${rainData} mm</p>
+                        <p class="card-text">Temp: ${tempC.toFixed(2)} °c</p>
+                        <p class="card-text">Wind: ${wind} km/h</p>
+                        <p class="card-text">Humidity: ${humidity} %</p>
+                        </div>
+                    </div>
+                `;
                     // Appending the card to the container with ID 'today'
                     $("#today").html(cardHTML);
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
                 });
 
             // Construct the API query URL for forecast data
-            var queryForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + APIKey;
+            var queryForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}`;
 
             // Fetching data forecast for the coming 5 days
             fetch(queryForecast)
@@ -129,19 +129,19 @@ $(document).ready(function () {
                             var tempC = forecast.main.temp - 273.15;
                             wind = forecast.wind.speed; // Assigning wind speed
                             humidity = forecast.main.humidity; // Assigning humidity
-                            forecastHTML += '\
-                            <div class="col">\
-                                <div id="forecast-card" class="card mb-2 mb-sm-2 mx-lg-3 text-center">\
-                                    <div class="card-body">\
-                                        <h5 class="card-title">' + date + '</h5>\
-                                        <img src="http://openweathermap.org/img/w/' + forecastWeatherIcon + '.png" alt="Weather Icon">\
-                                        <p class="card-text">Temp: ' + tempC.toFixed(2) + ' °c</p>\
-                                        <p class="card-text">Wind: ' + wind + ' km/h</p>\
-                                        <p class="card-text">Humidity: ' + humidity + ' %</p>\
-                                    </div>\
-                                </div>\
-                            </div>\
-                        ';
+                            forecastHTML += `
+                            <div class="col">
+                                <div id="forecast-card" class="card mb-2 mb-sm-2 mx-lg-3 text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${date}</h5>
+                                        <img src="http://openweathermap.org/img/w/${forecastWeatherIcon}.png" alt="Weather Icon">
+                                        <p class="card-text">Temp: ${tempC.toFixed(2)} °c</p>
+                                        <p class="card-text">Wind: ${wind} km/h</p>
+                                        <p class="card-text">Humidity: ${humidity} %</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
                         }
                     }
 
@@ -156,3 +156,4 @@ $(document).ready(function () {
         $("#input-field").val("");
     });
 });
+
