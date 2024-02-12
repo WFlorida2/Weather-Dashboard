@@ -117,7 +117,8 @@ $(document).ready(function () {
                     var currentDate = dayjs().format("DD/MM/YYYY"); // Current date
                     var addedDates = []; // Array to store dates already added to the forecast HTML
                     var wind, humidity; // Declaring wind and humidity variables
-
+                    // card title for 5-Day Forecast
+                    forecastHTML += `<h2 class="card-title">5-Day Forecast</h2>`;
                     // Using for loop 
                     for (var i = 0; i < forecastList.length; i++) {
                         var forecast = forecastList[i];
