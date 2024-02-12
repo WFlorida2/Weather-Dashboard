@@ -34,6 +34,6 @@ Full credit to students on the Discord group of helping each other’s out with 
 
 
 #### End results:
-![End product1](assets/images/End product 1.png) 
-![End product2](assets/images/End product 2.png)
-![End product3](assets/images/End product 3.png)
+![End product1](assets/images/End%20product%201.png) 
+![End product2](assets/images/End%20product%202.png)
+![End product3](assets/images/End%20product%203.png)
